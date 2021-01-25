@@ -1,11 +1,15 @@
 # syncgw DosBox edition 1.94
 
-Our edition is based on [DosBox 0.74-3](https://sourceforge.net/projects/dosbox/files/dosbox/) source code. Everything is ready to be compiled with [MinGW](https://sourceforge.net/projects/mingw/files/latest/download?source=files) under Win 10. If you want to start over, you may also download the ready-to-use executables.
+Our edition is based on [DosBox 0.74-3](https://sourceforge.net/projects/dosbox/files/dosbox/) source code. Everything is ready 
+to be compiled with [MinGW](https://sourceforge.net/projects/mingw/files/latest/download?source=files) under Win 10. 
+If you do not want to compile your version, you may also download the ready-to-use executables from the ``exe`` directory.
+
+If want to know how I created this DosBox version, please check out ``docs/HowTo Compile.pdf``.
 
 All patches are controlled by ``#define`` statements in file ``include/syncgw.h``.
 
 ```
-#define SYNCGW_VER VERSION " - syncgw.com Edition 1.95"
+#define SYNCGW_VER VERSION " - syncgw.com Edition 1.94"
 ```
 ** Description: **
 Changes DosBox window title to show edition name.
