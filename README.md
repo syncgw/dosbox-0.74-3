@@ -26,13 +26,13 @@ Enable read/write access to Windows Clipboard. This patch has some limitations:
 **Testing:**
 
 1. Start ``notepad.exe`` in Windows
-* Open DosBox
-* Enter ``copy z:\autoexec.bat clpboard``
-* Switch to notepad and enter ``<CTRL><V>``
-* You should see content of autoexec.bat
-* Modify content and mark block; enter ``<CTRL><C>``
-* Switch to DosBox and enter ``copy clpboard con``
-* You should see modified data
+2. Open DosBox
+3. Enter ``copy z:\autoexec.bat clpboard``
+4. Switch to notepad and enter ``<CTRL><V>``
+5. You should see content of autoexec.bat
+6. Modify content and mark block; enter ``<CTRL><C>``
+7. Switch to DosBox and enter ``copy clpboard con``
+8. You should see modified data
 
 ```
 #define SYNCGW_LPTX
@@ -46,11 +46,11 @@ the temporary "device" files will be automatically deleted.
 **Configuration:**
 
 1. Compile the DosBox SYNCGW Edition
-* Call dosbox.exe
-* Enter ``config -writeconf dosbox.conf``
-* Load ``dosbox.conf`` into editor
-* Search for ``[printer]`` section
-* Print output is discarded by default:
+2. Call dosbox.exe
+3. Enter ``config -writeconf dosbox.conf``
+4. Load ``dosbox.conf`` into editor
+5. Search for ``[printer]`` section
+6. Print output is discarded by default:
 
 ```        
         ...
@@ -74,11 +74,11 @@ convert the print output by sending print file to GhostScript (which is able to 
 ** Testing: **
 
 1. Specify ``LPT1=type %s`` in dosbox.conf
-* Open DosBox
-* Enter ``copy z:\autoexec.bat LPT2``
-* A message should appear in console window notifying output is discarded (``Output to LPT2 discarded due to configuration settings``)
-* Enter ``copy z:\autoexec.bat LPT1``
-* Content of file should be shown in console window
+2. Open DosBox
+3. Enter ``copy z:\autoexec.bat LPT2``
+4. A message should appear in console window notifying output is discarded (``Output to LPT2 discarded due to configuration settings``)
+5. Enter ``copy z:\autoexec.bat LPT1``
+6. Content of file should be shown in console window
 
 ```
 #define SYNCGW_COUNTRY_DE
@@ -114,8 +114,8 @@ Please keep in mind, this patch takes care only about the translation of "Umlaut
 ** Testing: **
 
 1. Enter ``mount C: C:\DosBox`` in DosBox window
-* Enter ``copy Z:\autoexec.bat c:\äÄöÖüÜß``
-* Enter ``dir c:\äÄöÖüÜß``
+2. Enter ``copy Z:\autoexec.bat c:\äÄöÖüÜß``
+3. Enter ``dir c:\äÄöÖüÜß``
 
 ```
 #define SYNCGW_FILEDATETIME
@@ -127,12 +127,12 @@ Add missing function (INT 21H, 0x5701) for setting date and time to files.
 ** Testing: **
 
 1. Create two empty directories ``t1`` and ``t2``
-* Copy some files into directory ``t1``
-* Start "Norton Commander" or some other synchronization software
-* Open directory ``t2`` in righ window and ``t1`` in left window
-* Synchronize directory ``t1`` with directory ``t2``
-* Compare directory ``t1`` with directory ``t2``
-* All files should be equal
+2. Copy some files into directory ``t1``
+3. Start "Norton Commander" or some other synchronization software
+4. Open directory ``t2`` in righ window and ``t1`` in left window
+5. Synchronize directory ``t1`` with directory ``t2``
+6. Compare directory ``t1`` with directory ``t2``
+7. All files should be equal
 
 Please enjoy!
 
