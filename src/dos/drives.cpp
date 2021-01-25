@@ -118,6 +118,15 @@ char * DOS_Drive::GetInfo(void) {
 	return info;
 }
 
+#ifdef SYNCGW_FILEDATETIME
+/*
+* Brute force - get base directory
+*/
+char * DOS_Drive::GetBaseDir(void) {
+	return info + 16;
+}
+#endif
+
 // static members variables
 int DriveManager::currentDrive;
 DriveManager::DriveInfo DriveManager::driveInfos[26];

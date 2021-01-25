@@ -57,6 +57,15 @@ static Bitu DOS_CaseMapFunc(void) {
 }
 
 static Bit8u country_info[0x22] = {
+#ifdef SYNCGW_COUNTRY_DE
+/* Date format      */  0x01, 0x00,
+/* Currencystring   */  0xee, 0x00, 0x00, 0x00, 0x00,
+/* Thousands sep    */  0x2e, 0x00,
+/* Decimal sep      */  0x2c, 0x00,
+/* Date sep         */  0x2e, 0x00,
+/* time sep         */  0x3a, 0x00,										
+/* currency format  */  0x03,
+#else
 /* Date format      */  0x00, 0x00,
 /* Currencystring   */  0x24, 0x00, 0x00, 0x00, 0x00,
 /* Thousands sep    */  0x2c, 0x00,
@@ -64,6 +73,7 @@ static Bit8u country_info[0x22] = {
 /* Date sep         */  0x2d, 0x00,
 /* time sep         */  0x3a, 0x00,
 /* currency form    */  0x00,
+#endif
 /* digits after dec */  0x02,
 /* Time format      */  0x00,
 /* Casemap          */  0x00, 0x00, 0x00, 0x00,

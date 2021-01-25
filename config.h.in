@@ -311,3 +311,4 @@ typedef         double     Real64;
 #endif
 
 
+#include "syncgw.h"

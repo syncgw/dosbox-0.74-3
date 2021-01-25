@@ -30,6 +30,12 @@
 /* Include all the devices */
 
 #include "dev_con.h"
+#ifdef SYNCGW_CLIPB
+#include "dev_cb.h"
+#endif
+#ifdef SYNCGW_LPTX
+#include "dev_lpt.h"
+#endif
 
 
 DOS_Device * Devices[DOS_DEVICES];
@@ -100,6 +106,10 @@ DOS_File::DOS_File(const DOS_File& orig) {
 	open=orig.open;
 	hdrive=orig.hdrive;
 	name=0;
+#ifdef SYNCGW_FILEDATETIME
+	newtime=orig.newtime;
+	drive=orig.drive;
+#endif	
 	if(orig.name) {
 		name=new char [strlen(orig.name) + 1];strcpy(name,orig.name);
 	}
@@ -116,6 +126,10 @@ DOS_File & DOS_File::operator= (const DOS_File & orig) {
 	if(name) {
 		delete [] name; name=0;
 	}
+#ifdef SYNCGW_FILEDATETIME
+	newtime=orig.newtime;
+	drive=orig.drive;
+#endif
 	if(orig.name) {
 		name=new char [strlen(orig.name) + 1];strcpy(name,orig.name);
 	}
@@ -188,7 +202,14 @@ void DOS_SetupDevices(void) {
 	DOS_Device * newdev2;
 	newdev2=new device_NUL();
 	DOS_AddDevice(newdev2);
+#ifndef SYNCGW_LPTX	
 	DOS_Device * newdev3;
 	newdev3=new device_LPT1();
 	DOS_AddDevice(newdev3);
+#endif	
+#ifdef SYNCGW_CLIPB
+	DOS_Device * newdev4;
+	newdev4 = new device_CB();
+	DOS_AddDevice(newdev4);
+#endif 
 }

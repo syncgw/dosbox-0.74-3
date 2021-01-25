@@ -1,0 +1,44 @@
+vga.o: vga.cpp ../../include/dosbox.h ../../config.h \
+ ../../include/syncgw.h ../../include/logging.h ../../include/video.h \
+ ../../include/pic.h ../../include/vga.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/string.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/crtdefs.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_mac.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_secapi.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/vadefs.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/string_s.h
+
+../../include/dosbox.h:
+
+../../config.h:
+
+../../include/syncgw.h:
+
+../../include/logging.h:
+
+../../include/video.h:
+
+../../include/pic.h:
+
+../../include/vga.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/string.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/crtdefs.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_mac.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_secapi.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/vadefs.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/string_s.h:

@@ -1,0 +1,216 @@
+keyboard.o: keyboard.cpp ../../include/dosbox.h ../../config.h \
+ ../../include/syncgw.h ../../include/logging.h ../../include/keyboard.h \
+ ../../include/inout.h ../../include/pic.h ../../include/mem.h \
+ ../../include/mixer.h ../../include/timer.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_main.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_stdinc.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_config.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_platform.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sys/types.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/crtdefs.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_mac.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_secapi.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/vadefs.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_off_t.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdio.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_print_push.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/swprintf.inl \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_print_pop.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/stdlib.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdlib \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++config.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/os_defines.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/cpu_defines.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdlib.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/limits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/limits.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/malloc.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/std_abs.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stddef.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stddef.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stdarg.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdarg.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_stdarg.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/string.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/string_s.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/strings.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/inttypes.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stdint.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdint.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/ctype.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/begin_code.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/close_code.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_audio.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_error.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_endian.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_mutex.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_thread.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_rwops.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_cdrom.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_cpuinfo.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_events.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_active.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_keyboard.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_keysym.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_mouse.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_video.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_joystick.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_quit.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_loadso.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_timer.h \
+ C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_version.h
+
+../../include/dosbox.h:
+
+../../config.h:
+
+../../include/syncgw.h:
+
+../../include/logging.h:
+
+../../include/keyboard.h:
+
+../../include/inout.h:
+
+../../include/pic.h:
+
+../../include/mem.h:
+
+../../include/mixer.h:
+
+../../include/timer.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_main.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_stdinc.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_config.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_platform.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sys/types.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/crtdefs.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_mac.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_secapi.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/vadefs.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_off_t.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdio.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_print_push.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/swprintf.inl:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/stdio_s.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_print_pop.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/stdlib.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdlib:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++config.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/os_defines.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/cpu_defines.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdlib.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/limits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/syslimits.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/limits.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/stdlib_s.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/malloc.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/std_abs.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stddef.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stddef.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stdarg.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdarg.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_stdarg.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/string.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/string_s.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/strings.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/inttypes.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stdint.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdint.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/ctype.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/begin_code.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/close_code.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_audio.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_error.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_endian.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_mutex.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_thread.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_rwops.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_cdrom.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_cpuinfo.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_events.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_active.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_keyboard.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_keysym.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_mouse.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_video.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_joystick.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_quit.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_loadso.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_timer.h:
+
+C:/aXa/bin/MinGW/msys/1.0/local/include/SDL/SDL_version.h:

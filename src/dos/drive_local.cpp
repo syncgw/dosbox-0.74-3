@@ -30,6 +30,9 @@
 #include "support.h"
 #include "cross.h"
 #include "inout.h"
+#ifdef SYNCGW_FILEDATETIME
+#include <utime.h>
+#endif
 
 class localFile : public DOS_File {
 public:
@@ -502,6 +505,30 @@ bool localFile::Close() {
 		fhandle = 0;
 		open = false;
 	};
+#ifdef SYNCGW_FILEDATETIME
+	if (newtime) {
+		struct tm tim = { 0 };
+		tim.tm_sec  = (time&0x1f)*2;
+		tim.tm_min  = (time>>5)&0x3f;
+		tim.tm_hour = (time>>11)&0x1f;
+		tim.tm_mday = date&0x1f;
+		tim.tm_mon  = ((date>>5)&0x0f)-1;
+		tim.tm_year = (date>>9)+1980-1900;
+		tim.tm_isdst = -1;
+		mktime(&tim);
+		struct utimbuf ftim;
+		ftim.actime = ftim.modtime = mktime(&tim);
+		char fullname[DOS_PATHLENGTH];
+		strcpy(fullname, Drives[drive]->GetBaseDir());
+		strcat(fullname, name);
+#ifdef SYNCGW_FILECHAR
+		ConvertGerman(fullname, true);
+#endif
+		CROSS_FILENAME(fullname);
+		if (utime(fullname, &ftim))
+			return false;
+	}
+#endif
 	return true;
 }
 

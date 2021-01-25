@@ -1,0 +1,375 @@
+gameblaster.o: gameblaster.cpp ../../include/dosbox.h ../../config.h \
+ ../../include/syncgw.h ../../include/logging.h ../../include/inout.h \
+ ../../include/mixer.h ../../include/mem.h ../../include/hardware.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdio.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/crtdefs.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_mac.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_secapi.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/vadefs.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_print_push.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_off_t.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/swprintf.inl \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_print_pop.h \
+ ../../include/setup.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/list \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++config.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/os_defines.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/cpu_defines.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/functexcept.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/exception_defines.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/type_traits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/numeric_traits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_pair.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/move.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/concept_check.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/type_traits \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_types.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/debug/assertions.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/debug/debug.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/allocator.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++allocator.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/new \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/exception \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/exception.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/exception_ptr.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/cxxabi_init_exception.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stddef.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stddef.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/typeinfo \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/hash_bytes.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/nested_exception.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/range_access.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/initializer_list \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/vector \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/string \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/char_traits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/postypes.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cwchar \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/wchar.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_stat64.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/wchar_s.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdint \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stdint.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdint.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/localefwd.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++locale.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/clocale \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/locale.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/iosfwd \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cctype \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/ctype.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ostream_insert.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_function.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward/binders.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/basic_string.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/atomicity.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/gthr.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/gthr-default.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/errno.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/atomic_word.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdlib \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdlib.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/limits.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/limits.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/stdlib.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/malloc.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/std_abs.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdio \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cerrno \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc \
+ ../../include/support.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/string.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/string_s.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/strings.h \
+ ../../include/pic.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstring \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/math.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cmath \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/math.h mame/emu.h \
+ C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/float.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/float.h \
+ C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/memory.h \
+ mame/saa1099.h
+
+../../include/dosbox.h:
+
+../../config.h:
+
+../../include/syncgw.h:
+
+../../include/logging.h:
+
+../../include/inout.h:
+
+../../include/mixer.h:
+
+../../include/mem.h:
+
+../../include/hardware.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdio.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/crtdefs.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_mac.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_secapi.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/vadefs.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_print_push.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_off_t.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/swprintf.inl:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/stdio_s.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_print_pop.h:
+
+../../include/setup.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/list:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++config.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/os_defines.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/cpu_defines.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/functexcept.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/exception_defines.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/type_traits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/numeric_traits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_pair.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/move.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/concept_check.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/type_traits:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_types.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/debug/assertions.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/debug/debug.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/allocator.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++allocator.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/new:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/exception:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/exception.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/exception_ptr.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/cxxabi_init_exception.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stddef.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stddef.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/typeinfo:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/hash_bytes.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/nested_exception.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/range_access.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/initializer_list:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_list.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/list.tcc:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/vector:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/string:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/char_traits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/postypes.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cwchar:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/wchar.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/_mingw_stat64.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/wchar_s.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdint:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/stdint.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdint.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/localefwd.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++locale.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/clocale:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/locale.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/iosfwd:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cctype:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/ctype.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ostream_insert.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_function.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward/binders.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/atomicity.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/gthr.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/gthr-default.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/errno.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/atomic_word.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdlib:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/stdlib.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/limits.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/syslimits.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/limits.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/stdlib_s.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/stdlib.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/malloc.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/std_abs.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdio:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cerrno:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc:
+
+../../include/support.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/string.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/sec_api/string_s.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/strings.h:
+
+../../include/pic.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstring:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/math.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cmath:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/math.h:
+
+mame/emu.h:
+
+C:/aXa/bin/MinGW/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/float.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/float.h:
+
+C:/aXa/bin/MinGW/mingw32/i686-w64-mingw32/include/memory.h:
+
+mame/saa1099.h:

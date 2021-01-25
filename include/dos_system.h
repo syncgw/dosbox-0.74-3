@@ -63,7 +63,11 @@ class DOS_DTA;
 
 class DOS_File {
 public:
+#ifdef SYNCGW_FILEDATETIME
+	DOS_File():flags(0)		{ name=0; refCtr = 0; hdrive=0xff; newtime=false; };
+#else
 	DOS_File():flags(0)		{ name=0; refCtr = 0; hdrive=0xff; };
+#endif
 	DOS_File(const DOS_File& orig);
 	DOS_File & operator= (const DOS_File & orig);
 	virtual	~DOS_File(){if(name) delete [] name;};
@@ -88,6 +92,10 @@ public:
 	Bits refCtr;
 	bool open;
 	char* name;
+#ifdef SYNCGW_FILEDATETIME
+	bool newtime;
+	Bit8u drive;
+#endif	
 /* Some Device Specific Stuff */
 private:
 	Bit8u hdrive;
@@ -236,6 +244,9 @@ public:
 	virtual Bits UnMount(void)=0;
 
 	char * GetInfo(void);
+#ifdef SYNCGW_FILEDATETIME
+	virtual char *GetBaseDir();
+#endif
 	char curdir[DOS_PATHLENGTH];
 	char info[256];
 	/* Can be overridden for example in iso images */

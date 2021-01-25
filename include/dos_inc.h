@@ -76,7 +76,11 @@ enum { RETURN_EXIT=0,RETURN_CTRLC=1,RETURN_ABORT=2,RETURN_TSR=3};
 
 #define DOS_FILES 127
 #define DOS_DRIVES 26
+#ifdef SYNCGW_LPTX
+#define DOS_DEVICES 14
+#else
 #define DOS_DEVICES 10
+#endif
 
 
 // dos swappable area is 0x320 bytes beyond the sysvars table
@@ -119,6 +123,9 @@ bool DOS_FlushFile(Bit16u handle);
 bool DOS_DuplicateEntry(Bit16u entry,Bit16u * newentry);
 bool DOS_ForceDuplicateEntry(Bit16u entry,Bit16u newentry);
 bool DOS_GetFileDate(Bit16u entry, Bit16u* otime, Bit16u* odate);
+#ifdef SYNCGW_FILEDATETIME
+bool DOS_SetFileDate(Bit16u entry, Bit16u ntime, Bit16u ndate);
+#endif
 
 /* Routines for Drive Class */
 bool DOS_OpenFile(char const * name,Bit8u flags,Bit16u * entry);
@@ -133,6 +140,9 @@ bool DOS_FileExists(char const * const name);
 
 /* Helper Functions */
 bool DOS_MakeName(char const * const name,char * const fullname,Bit8u * drive);
+#ifdef SYNCGW_FILECHAR
+char * ConvertGerman(char * name, bool mod);	
+#endif
 /* Drive Handing Routines */
 Bit8u DOS_GetDefaultDrive(void);
 void DOS_SetDefaultDrive(Bit8u drive);

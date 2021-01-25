@@ -1,0 +1,10 @@
+ipxserver.o: ipxserver.cpp ../../include/dosbox.h ../../config.h \
+ ../../include/syncgw.h ../../include/logging.h
+
+../../include/dosbox.h:
+
+../../config.h:
+
+../../include/syncgw.h:
+
+../../include/logging.h:

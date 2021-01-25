@@ -188,7 +188,11 @@ char* DOS_Drive_Cache::GetExpandName(const char* path) {
 			work[len-1] = 0; // Remove trailing slashes except when in root
 		}
 	}
+#ifdef SYNCGW_FILECHAR
+	return ConvertGerman(work, true);
+#else
 	return work;
+#endif
 }
 
 void DOS_Drive_Cache::AddEntry(const char* path, bool checkExists) {
@@ -560,6 +564,9 @@ void DOS_Drive_Cache::CreateShortName(CFileInfo* curDir, CFileInfo* info) {
 		strcpy(info->shortname,tmpName);
 	}
 	RemoveTrailingDot(info->shortname);
+#ifdef SYNCGW_FILECHAR
+	ConvertGerman(info->shortname, false);
+#endif	
 }
 
 DOS_Drive_Cache::CFileInfo* DOS_Drive_Cache::FindDirInfo(const char* path, char* expandedPath) {

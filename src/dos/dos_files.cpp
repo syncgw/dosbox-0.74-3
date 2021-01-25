@@ -94,6 +94,15 @@ bool DOS_MakeName(char const * const name,char * const fullname,Bit8u * drive) {
 		case '_':	case '-':	case '.':	case '*':	case '?':	case '&':
 		case '\'':	case '+':	case '^':	case 246:	case 255:	case 0xa0:
 		case 0xe5:	case 0xbd:
+#ifdef SYNCGW_FILECHAR
+		case (Bit8u)(0x84):		// ä									
+		case (Bit8u)(0x8e):		// Ä									
+		case (Bit8u)(0x94):		// ö									
+		case (Bit8u)(0x99):		// Ö									
+		case (Bit8u)(0x81):		// ü									
+		case (Bit8u)(0x9a):		// Ü									
+		case (Bit8u)(0xe1):		// ß									
+#endif
 			upname[w++]=c;
 			break;
 		default:
@@ -176,6 +185,25 @@ bool DOS_MakeName(char const * const name,char * const fullname,Bit8u * drive) {
 				if((strlen(tempdir) - strlen(ext)) > 8) memmove(tempdir + 8, ext, 5);
 			} else tempdir[8]=0;
 
+#ifndef SYNCGW_FILECHAR
+			for (Bitu i=0;i<strlen(tempdir);i++) {
+				c=tempdir[i];
+				if ((c>='A') && (c<='Z')) continue;
+				if ((c>='0') && (c<='9')) continue;
+				switch (c) {
+				case '$':	case '#':	case '@':	case '(':	case ')':
+				case '!':	case '%':	case '{':	case '}':	case '`':	case '~':
+				case '_':	case '-':	case '.':	case '*':	case '?':	case '&':
+				case '\'':	case '+':	case '^':	case 246:	case 255:	case 0xa0:
+				case 0xe5:	case 0xbd:	case 0x9d:
+					break;
+				default:
+					LOG(LOG_FILES,LOG_NORMAL)("Makename encountered an illegal char %c hex:%X in %s!",c,c,name);
+					DOS_SetError(DOSERR_PATH_NOT_FOUND);return false;
+					break;
+				}
+			}
+#endif
 			if (strlen(fullname)+strlen(tempdir)>=DOS_PATHLENGTH) {
 				DOS_SetError(DOSERR_PATH_NOT_FOUND);return false;
 			}
@@ -189,6 +217,31 @@ bool DOS_MakeName(char const * const name,char * const fullname,Bit8u * drive) {
 	}
 	return true;	
 }
+
+#ifdef SYNCGW_FILECHAR
+char * ConvertGerman(char * name, bool mod) {
+#define M_SC 8
+	static struct {
+		char	doschar;
+		char	ansichar;
+	} conv[M_SC] = {
+		(char)(0x84), (char)(0xe4),	// ä
+		(char)(0x8e), (char)(0xc4),	// Ä
+		(char)(0x94), (char)(0xf6),	// ö
+		(char)(0x99), (char)(0xd6),	// Ö
+		(char)(0x81), (char)(0xfc),	// ü
+		(char)(0x9a), (char)(0xdc),	// Ü
+		(char)(0xe1), (char)(0xdf),	// ß
+		(char)(0xee), (char)(0x80), // €
+	};
+	int n;
+	for (n=0; n < M_SC; n++) {
+		if (mod) strreplace(name, conv[n].doschar, conv[n].ansichar);
+		else strreplace(name, conv[n].ansichar, conv[n].doschar);
+	}
+	return name;
+}
+#endif
 
 bool DOS_GetCurrentDir(Bit8u drive,char * const buffer) {
 	if (drive==0) drive=DOS_GetDefaultDrive();
@@ -497,6 +550,9 @@ bool DOS_CreateFile(char const * name,Bit16u attributes,Bit16u * entry) {
 		Files[handle]->SetDrive(drive);
 		Files[handle]->AddRef();
 		psp.SetFileHandle(*entry,handle);
+#ifdef SYNCGW_FILEDATETIME
+		Files[handle]->drive = drive;
+#endif
 		return true;
 	} else {
 		if(!PathExists(name)) DOS_SetError(DOSERR_PATH_NOT_FOUND); 
@@ -554,6 +610,9 @@ bool DOS_OpenFile(char const * name,Bit8u flags,Bit16u * entry) {
 	if (exists || device ) { 
 		Files[handle]->AddRef();
 		psp.SetFileHandle(*entry,handle);
+#ifdef SYNCGW_FILEDATETIME
+		Files[handle]->drive = drive;
+#endif
 		return true;
 	} else {
 		//Test if file exists, but opened in read-write mode (and writeprotected)
@@ -1230,3 +1289,22 @@ void DOS_SetupFiles (void) {
 	}
 	Drives[25]=new Virtual_Drive();
 }
+
+#ifdef SYNCGW_FILEDATETIME
+bool DOS_SetFileDate(Bit16u entry, Bit16u ntime, Bit16u ndate) {
+	Bit32u handle=RealHandle(entry);
+	if (handle>=DOS_FILES) {
+		DOS_SetError(DOSERR_INVALID_HANDLE);
+		return false;
+	};
+	if (!Files[handle]) {
+		DOS_SetError(DOSERR_INVALID_HANDLE);
+		return false;
+	};
+	Files[handle]->time = ntime;
+	Files[handle]->date = ndate;
+	Files[handle]->newtime = true;
+	return true;
+};
+#endif
+
